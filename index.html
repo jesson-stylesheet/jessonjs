@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesson Setiawan | Digital Architect</title>
-    
+
     <!-- GSAP Core & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -22,8 +23,12 @@
             --spacing-md: 5vh;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -32,8 +37,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- UTILITIES --- */
         .container {
@@ -53,7 +64,7 @@
             justify-content: space-between;
             align-items: end;
         }
-        
+
         .section-sub {
             font-size: 1rem;
             font-weight: 400;
@@ -61,7 +72,12 @@
             font-family: var(--font-mono);
             display: none;
         }
-        @media(min-width: 768px) { .section-sub { display: block; } }
+
+        @media(min-width: 768px) {
+            .section-sub {
+                display: block;
+            }
+        }
 
         /* --- HERO SECTION (INTERACTIVE) --- */
         .hero {
@@ -73,18 +89,20 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            cursor: none; 
+            cursor: none;
         }
 
         @media (max-width: 768px) {
-            .hero { cursor: default; }
+            .hero {
+                cursor: default;
+            }
         }
 
         .hero-content {
             z-index: 10;
             text-align: center;
-            pointer-events: none; 
-            mix-blend-mode: difference; 
+            pointer-events: none;
+            mix-blend-mode: difference;
         }
 
         .hero h1 {
@@ -109,24 +127,30 @@
             background: var(--bg-light);
             border-radius: 50%;
             position: fixed;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             z-index: 100;
             pointer-events: none;
             mix-blend-mode: exclusion;
             display: none;
         }
-        @media (min-width: 769px) { .cursor-dot { display: block; } }
+
+        @media (min-width: 769px) {
+            .cursor-dot {
+                display: block;
+            }
+        }
 
         /* The Trail Images (Desktop) */
         .trail-img {
             position: absolute;
-            width: 200px; 
+            width: 200px;
             height: auto;
             pointer-events: none;
             opacity: 0;
             transform: translate(-50%, -50%) scale(0.5);
             z-index: 1;
-            filter: grayscale(100%); 
+            filter: grayscale(100%);
         }
 
         /* Rain Images (Mobile) */
@@ -142,7 +166,7 @@
         /* --- CTA BUTTONS --- */
         .cta-wrapper {
             margin-top: 50px;
-            pointer-events: auto; 
+            pointer-events: auto;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -207,7 +231,7 @@
             font-size: 1.2rem;
             margin-right: 50px;
         }
-        
+
         .cert-item span {
             font-weight: 400;
             font-size: 0.9rem;
@@ -217,8 +241,13 @@
         }
 
         @keyframes scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
         }
 
         /* --- EXPERIENCE SECTION --- */
@@ -240,19 +269,21 @@
             gap: 20px;
         }
 
-        .exp-item, .client-item {
+        .exp-item,
+        .client-item {
             border-top: 1px solid rgba(252, 248, 242, 0.1);
             padding: 30px 0;
             transition: all 0.4s ease;
             position: relative;
         }
-        
+
         /* EXP Specifics */
         .exp-item:hover {
             padding-left: 30px;
-            background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
             border-top: 1px solid var(--bg-light);
         }
+
         .exp-header {
             display: flex;
             justify-content: space-between;
@@ -260,19 +291,40 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .exp-role { font-weight: 700; font-size: 1.5rem; margin-bottom: 5px; }
-        .exp-company { font-size: 1.1rem; color: rgba(252,248,242,0.8); }
-        .exp-date { font-family: var(--font-mono); font-size: 0.9rem; opacity: 0.5; }
-        .exp-details { margin-top: 15px; font-size: 0.95rem; line-height: 1.6; opacity: 0.7; max-width: 600px; }
+
+        .exp-role {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            color: rgba(252, 248, 242, 0.8);
+        }
+
+        .exp-date {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+
+        .exp-details {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.7;
+            max-width: 600px;
+        }
 
         /* --- COLLABORATORS SECTION --- */
         .client-item {
             cursor: pointer;
-            position: relative; 
+            position: relative;
         }
 
         .client-name {
-            font-size: 1.8rem; 
+            font-size: 1.8rem;
             font-weight: 700;
             transition: opacity 0.3s;
         }
@@ -288,7 +340,7 @@
         .client-popup {
             position: absolute;
             top: 50%;
-            left: 50%; 
+            left: 50%;
             width: 280px;
             background: #1a1a1a;
             border: 1px solid var(--bg-light);
@@ -299,7 +351,7 @@
             visibility: hidden;
             transform: translate(20px, -50%) rotate(5deg);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .client-popup img {
@@ -310,12 +362,23 @@
             filter: grayscale(100%);
         }
 
-        .client-popup h4 { font-size: 1rem; margin-bottom: 5px; }
-        .client-popup p { font-size: 0.8rem; opacity: 0.7; font-family: var(--font-mono); }
+        .client-popup h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .client-popup p {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            font-family: var(--font-mono);
+        }
 
         /* Hover Effect (Desktop) */
         @media (min-width: 769px) {
-            .client-item:hover .client-name { opacity: 0.5; }
+            .client-item:hover .client-name {
+                opacity: 0.5;
+            }
+
             .client-item:hover .client-popup {
                 opacity: 1;
                 visibility: visible;
@@ -327,10 +390,10 @@
         .client-item.active .client-popup {
             opacity: 1;
             visibility: visible;
-            transform: translate(-10%, 10%) rotate(0deg); 
+            transform: translate(-10%, 10%) rotate(0deg);
             z-index: 50;
         }
-        
+
         @media (max-width: 768px) {
             .client-popup {
                 left: 0;
@@ -338,6 +401,7 @@
                 width: 90%;
                 transform: translate(0, 10px);
             }
+
             .client-item.active .client-popup {
                 transform: translate(0, 0);
             }
@@ -349,7 +413,7 @@
             flex-wrap: wrap;
             justify-content: center;
             /* Extra padding to account for the bounce animation so it doesn't clip */
-            padding: 100px 0 200px 0; 
+            padding: 100px 0 100px 0;
             gap: 20px;
         }
 
@@ -358,7 +422,8 @@
             width: 100%;
             max-width: 350px;
             height: 450px;
-            display: block; /* Essential for custom elements */
+            display: block;
+            /* Essential for custom elements */
         }
 
         /* --- FOOTER --- */
@@ -367,7 +432,7 @@
             text-align: center;
             border-top: 1px solid rgba(252, 248, 242, 0.1);
         }
-        
+
         .footer-link {
             font-size: 10vw;
             font-weight: 700;
@@ -377,13 +442,121 @@
             margin-bottom: 30px;
             transition: color 0.3s ease;
         }
-        
-        .footer-link:hover { color: rgba(252, 248, 242, 0.5); }
+
+        .footer-link:hover {
+            color: rgba(252, 248, 242, 0.5);
+        }
 
         /* --- REVEAL HELPERS --- */
-        .reveal-text { overflow: hidden; }
+        .reveal-text {
+            overflow: hidden;
+        }
+
+        /* --- 6. MEDIUM (ICEBERG) SECTION --- */
+        .medium-section {
+            height: 60vh;
+            /* Prominent height */
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            padding-bottom: 40vh;
+
+            /* DARK MODE ICEBERG BACKGROUND */
+            /* Sky / Background blend converted to dark theme */
+            background:
+                linear-gradient(#0000 50%, #021a24),
+                linear-gradient(to top right, #0000 50%, #0f3a42 0) calc(50vw - 20vmin) calc(50vh + 7vmin) / 21vmin 100%,
+                conic-gradient(at 18.5vmin 0, #0000 43%, #0f3a42 0) 50vw 50vh / 50% 100%,
+                #040314;
+            /* Site base dark */
+            background-repeat: no-repeat;
+        }
+
+        /* The Iceberg */
+        .medium-section::before {
+            content: "";
+            width: 40vmin;
+            height: 66vmin;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            translate: -50% -30%;
+            clip-path: polygon(0% 40%, 18% 18%, 28% 23%, 50% 0, 70% 15%, 75% 21%, 85% 22%, 98% 30%, 100% 40%, 80% 60%, 80% 80%, 55% 100%, 30% 83%, 20% 65%, 4% 50%);
+
+            /* Dark Mode Iceberg Colors: Muted Teals, Greys, and Moonlight White */
+            background:
+                radial-gradient(farthest-side at 53% 55%, rgba(255, 255, 255, 0.1), transparent 70%),
+                /* Highlight */
+                linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3)),
+                /* Shadow */
+
+                /* Facets */
+                conic-gradient(from -25deg at 25% 27%, #2a5d66 50deg, transparent 0),
+                conic-gradient(from 25deg at 59% 27%, #2a5d66 47deg, transparent 0),
+                conic-gradient(from -15deg at 54% 60%, #2a5d66 140deg, transparent 0) 0 0 / 100% 17%,
+                conic-gradient(from 30deg at 39% 26%, #b0dbe0 30deg, transparent 0),
+                /* Lit side */
+                conic-gradient(from 62deg at 53% 55%, #1b3d44 45deg, #234b53 0 85deg, transparent 0),
+                conic-gradient(from 15deg at 69% 57%, #2a5d66 47deg, transparent 0),
+                conic-gradient(from 70deg at 53% 89%, #1b3d44 105deg, #2a5d66 0 222deg, transparent 0),
+                conic-gradient(from 122deg at 53% 55%, #4d7c8a 58deg, #5f9ca6 0 173deg, transparent 0),
+                #cfedf0;
+            /* Base Color (Moonlit Ice) */
+
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            transition: transform 0.5s ease-out;
+        }
+
+        .medium-section:hover::before {
+            transform: scale(1.02);
+        }
+
+        /* Reflection / Water Surface */
+        .medium-section::after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background:
+                radial-gradient(farthest-side at 50% -50%, transparent calc(100% - 1px), rgba(37, 174, 180, 0.1)) 50% 0 / 5vmin 2vmin repeat-x,
+                linear-gradient(transparent 2vmin, rgba(37, 174, 180, 0.05) 0, rgba(37, 174, 180, 0.05));
+            pointer-events: none;
+        }
+
+        .medium-content {
+            z-index: 10;
+            text-align: center;
+            background: rgba(4, 3, 20, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(252, 248, 242, 0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .medium-content h2 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        .medium-content p {
+            margin-bottom: 30px;
+            font-family: var(--font-mono);
+            opacity: 0.8;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Custom Cursor Element (Desktop) -->
@@ -392,12 +565,17 @@
     <!-- 1. HERO SECTION -->
     <section class="hero" id="hero-area">
         <div class="hero-content">
-            <div class="reveal-text"><h1>Jesson</h1></div>
-            <div class="reveal-text"><h1>Setiawan</h1></div>
+            <div class="reveal-text">
+                <h1>Jesson</h1>
+            </div>
+            <div class="reveal-text">
+                <h1>Setiawan</h1>
+            </div>
             <h2>Full-Stack Digital Marketer & Developer</h2>
-            
+
             <div class="cta-wrapper">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">Connect on
+                    LinkedIn</a>
                 <a href="mailto:you@email.com" class="btn btn-secondary">Email Me</a>
             </div>
         </div>
@@ -440,7 +618,8 @@
                         <div class="exp-date">May 2024 - Present</div>
                     </div>
                     <p class="exp-details">
-                        Orchestrating paid media strategies across Meta, TikTok, and Google ecosystems. Focusing on impactful storytelling and data-driven optimization.
+                        Orchestrating paid media strategies across Meta, TikTok, and Google ecosystems. Focusing on
+                        impactful storytelling and data-driven optimization.
                     </p>
                 </div>
                 <!-- Likeable Creative -->
@@ -453,7 +632,8 @@
                         <div class="exp-date">Jul 2023 - May 2024</div>
                     </div>
                     <p class="exp-details">
-                        Directed digital strategy, managed SEO performance, and delivered high-level reporting while ensuring projects remained on brand.
+                        Directed digital strategy, managed SEO performance, and delivered high-level reporting while
+                        ensuring projects remained on brand.
                     </p>
                 </div>
                 <!-- PWD Digital Agency -->
@@ -482,14 +662,15 @@
         <div class="grid-layout">
             <div class="exp-label" style="opacity: 0.5; font-family: var(--font-mono);">SELECTED CLIENTS</div>
             <div class="exp-list">
-                
+
                 <!-- 1. Avant Pro -->
                 <div class="client-item" onclick="togglePopup(this)">
                     <div class="client-name">Avant Pro</div>
                     <div class="client-meta">Golf Apparel • Perth, WA</div>
                     <!-- Hidden Popup -->
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1593111774240-d529f12db464?q=80&w=600&auto=format&fit=crop" alt="Avant Pro">
+                        <img src="https://images.unsplash.com/photo-1593111774240-d529f12db464?q=80&w=600&auto=format&fit=crop"
+                            alt="Avant Pro">
                         <h4>Avant Pro</h4>
                         <p>Web Development & Brand Strategy for modern golf apparel.</p>
                     </div>
@@ -500,7 +681,8 @@
                     <div class="client-name">SPG Home Group</div>
                     <div class="client-meta">Osborne Park, WA</div>
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop" alt="SPG">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop"
+                            alt="SPG">
                         <h4>SPG Home Group</h4>
                         <p>Digital lead generation and local SEO dominance.</p>
                     </div>
@@ -511,7 +693,8 @@
                     <div class="client-name">Limestone Coast Brewer</div>
                     <div class="client-meta">Malaga, WA</div>
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=600&auto=format&fit=crop" alt="Limestone">
+                        <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=600&auto=format&fit=crop"
+                            alt="Limestone">
                         <h4>Limestone Coast</h4>
                         <p>E-commerce setup and social media visual direction.</p>
                     </div>
@@ -527,28 +710,22 @@
             Works
             <span class="section-sub">05 — SELECTION</span>
         </div>
-        
+
         <div class="showcase-area">
-            
-            <carousel-card 
-                skew="5deg, 3deg" 
+
+            <carousel-card skew="5deg, 3deg"
                 img="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?q=80&w=800&auto=format&fit=crop"
-                title="Avant Apparel"
-                subtitle="SHOPIFY / BRANDING">
+                title="Avant Apparel" subtitle="SHOPIFY / BRANDING">
             </carousel-card>
 
-            <carousel-card 
-                skew="-3deg, 2deg" 
+            <carousel-card skew="-3deg, 2deg"
                 img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-                title="Media Console"
-                subtitle="REACT / DATA VIZ">
+                title="Media Console" subtitle="REACT / DATA VIZ">
             </carousel-card>
 
-            <carousel-card 
-                skew="2deg, -4deg" 
+            <carousel-card skew="2deg, -4deg"
                 img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
-                title="Growth Systems"
-                subtitle="SEO / ARCHITECTURE">
+                title="Growth Systems" subtitle="SEO / ARCHITECTURE">
             </carousel-card>
 
         </div>
@@ -556,6 +733,16 @@
 
     <!-- EXPANDER ELEMENT (Required for the card click) -->
     <carousel-expand></carousel-expand>
+
+    <!-- 6. MEDIUM / ICEBERG SECTION -->
+    <section class="medium-section">
+        <div class="medium-content">
+            <h2>Deep Dives</h2>
+            <p>Exploring the depths of digital marketing, AI agents, and web architecture underneath the surface.</p>
+            <a href="https://medium.com/@jessonjsetiawan" target="_blank" class="btn btn-primary">Read on Medium</a>
+        </div>
+    </section>
+
 
     <footer>
         <a href="mailto:you@email.com" class="footer-link">Let's Talk.</a>
@@ -582,7 +769,7 @@
             window.addEventListener('mousemove', (e) => {
                 gsap.to(cursor, { x: e.clientX - 10, y: e.clientY - 10, duration: 0.2 });
             });
-            
+
             let zIndexCounter = 1;
             let lastMouseX = 0, lastMouseY = 0;
             const threshold = 80;
@@ -596,10 +783,10 @@
                 img.style.top = `${y}px`;
                 img.style.zIndex = zIndexCounter++;
                 heroSection.appendChild(img);
-                
+
                 const tl = gsap.timeline({ onComplete: () => img.remove() });
                 tl.to(img, { opacity: 0.6, scale: 1, rotation: Math.random() * 30 - 15, duration: 0.4 })
-                  .to(img, { opacity: 0, scale: 0.8, y: 30, duration: 0.5, delay: 0.1 });
+                    .to(img, { opacity: 0, scale: 0.8, y: 30, duration: 0.5, delay: 0.1 });
             };
 
             heroSection.addEventListener('mousemove', (e) => {
@@ -614,7 +801,7 @@
         } else {
             // MOBILE HERO (Rain)
             const rainCount = 12;
-            for(let i=0; i<rainCount; i++) {
+            for (let i = 0; i < rainCount; i++) {
                 const img = document.createElement('img');
                 const randomUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
                 img.src = randomUrl;
@@ -622,7 +809,7 @@
                 img.style.left = `${Math.random() * window.innerWidth}px`;
                 img.style.top = `-150px`;
                 heroSection.appendChild(img);
-                
+
                 gsap.to(img, {
                     y: window.innerHeight + 200,
                     duration: 3 + Math.random() * 4,
@@ -644,7 +831,7 @@
         // --- COLLABORATOR POPUP ---
         function togglePopup(element) {
             document.querySelectorAll('.client-item').forEach(item => {
-                if(item !== element) item.classList.remove('active');
+                if (item !== element) item.classList.remove('active');
             });
             element.classList.toggle('active');
         }
@@ -665,12 +852,12 @@
         // --- CUSTOM WEB COMPONENTS (FLOATING CARDS) ---
 
         // Global Controllers
-        window.pauseAllAnimations = function() {
+        window.pauseAllAnimations = function () {
             let cards = document.querySelectorAll("carousel-card");
             cards.forEach(card => card.pauseAnimation());
         }
 
-        window.resumeAllAnimations = function() {
+        window.resumeAllAnimations = function () {
             let cards = document.querySelectorAll("carousel-card");
             cards.forEach(card => card.resumeAnimation());
         }
@@ -678,7 +865,7 @@
         class CarouselCard extends HTMLElement {
             constructor() {
                 super();
-                
+
                 // Get Attributes
                 this.skew = this.getAttribute("skew") || "7deg, 5deg";
                 this.scale = this.getAttribute("scale") || "1.0";
@@ -689,10 +876,10 @@
                 this.lock = false;
                 var shadow = this.attachShadow({ mode: "open" });
                 var style = document.createElement("style");
-                
+
                 // Randomize bounce start
                 let randomStart = Math.random() * (100 - 60);
-                
+
                 // --- SHADOW DOM STYLES ---
                 style.textContent = `
                     :host {
@@ -755,7 +942,7 @@
 
                 var wrapper = document.createElement("div");
                 wrapper.setAttribute("class", "card");
-                
+
                 // Create internal content structure
                 wrapper.innerHTML = `
                     <div class="card-content">
@@ -823,7 +1010,7 @@
                 super();
                 var shadow = this.attachShadow({ mode: "open" });
                 var style = document.createElement("style");
-                
+
                 // --- EXPANDER STYLES ---
                 style.textContent = `
                     .content {
@@ -833,12 +1020,12 @@
                         height: var(--height);
                         border: 1px solid #fcf8f2;
                         position: fixed;
-                        z-index: 1001;
+                        z-index: 3001; /* Z-Index Fix: Higher than Card's 2000 */
                         left: calc(50vw - calc(var(--width)/2));
                         top: calc(50vh - calc(var(--height)/2));
-                        background: #040314; /* Dark bg */
+                        background: #040314;
                         color: #fcf8f2;
-                        display: none; /* Hidden by default */
+                        display: none;
                         background-size: cover;
                         background-position: center;
                     }
@@ -851,12 +1038,23 @@
                         padding: 40px;
                     }
 
+                    /* Mobile Responsiveness */
+                    @media (max-width: 768px) {
+                        .content--active {
+                            width: 95vw !important;
+                            height: 90vh !important;
+                            top: 5vh !important;
+                            left: 2.5vw !important;
+                            padding: 20px;
+                        }
+                    }
+
                     .container {
                         display: none;
                         position: fixed;
                         height: 100vh;
                         width: 100vw;
-                        z-index: 1000;
+                        z-index: 3000; /* Z-Index Fix: Higher than Card */
                         top: 0; left: 0;
                         background: rgba(0,0,0,0.8);
                         backdrop-filter: blur(5px);
@@ -882,24 +1080,29 @@
                     }
                     .close:hover { background: #fcf8f2; color: #040314; }
                     
-                    /* Hidden Content that appears on Expand */
                     .expanded-info {
                         opacity: 0;
                         transform: translateY(20px);
                         transition: all 0.3s delay 0.3s;
                     }
+                    
+                     @media (max-width: 768px) {
+                        .expanded-info h2 { font-size: 2rem !important; }
+                        .expanded-info p { font-size: 0.9rem; }
+                     }
+
                     .content--active .expanded-info {
                         opacity: 1;
                         transform: translateY(0);
                     }
                 `;
-                
+
                 const container = document.createElement('div');
                 container.setAttribute("class", "container");
-                
+
                 const content = document.createElement("div");
                 content.setAttribute("class", "content");
-                
+
                 // Inner HTML for the expanded view
                 content.innerHTML = `
                     <button class="close">Close</button>
@@ -912,7 +1115,7 @@
                 // Logic to close
                 content.querySelector('.close').addEventListener('click', () => this.close());
                 container.addEventListener('click', () => this.close());
-                
+
                 container.appendChild(content);
                 shadow.appendChild(style);
                 shadow.appendChild(container);
@@ -925,17 +1128,17 @@
                 // Get target dim
                 const box = target.getBoundingClientRect();
                 let content = this.shadowRoot.querySelector(".content");
-                
+
                 // Mimic original card bg
                 content.style.backgroundImage = target.style.backgroundImage;
-                
+
                 // Set start pos
                 content.style.width = box.width + "px";
                 content.style.height = box.height + "px";
                 content.style.top = box.top + "px";
                 content.style.left = box.left + "px";
-                content.style.display = "block"; 
-                
+                content.style.display = "block";
+
                 // Animate to full screen center
                 setTimeout(() => {
                     content.setAttribute('class', 'content content--active');
@@ -953,7 +1156,7 @@
                 // Animate out (simplified)
                 content.style.opacity = "0";
                 content.style.transform = "translateY(50px)";
-                
+
                 let container = this.shadowRoot.querySelector(".container");
                 container.style.opacity = "0";
 
@@ -963,10 +1166,10 @@
                     content.style.opacity = "";
                     content.style.transform = "";
                     content.style.display = "none";
-                    
+
                     container.setAttribute('class', 'container');
                     container.style.opacity = "";
-                    
+
                     // Unlock cards
                     let cards = document.querySelectorAll("carousel-card");
                     cards.forEach(card => {
@@ -977,9 +1180,10 @@
                 }, 500);
             }
         }
-        
+
         customElements.define("carousel-expand", CarouselExpand);
 
     </script>
 </body>
+
 </html>
