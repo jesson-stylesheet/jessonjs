@@ -113,11 +113,20 @@
         }
 
         .hero h2 {
-            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-size: clamp(1rem, 5vw, 1.5rem);
             font-weight: 400;
             margin-top: 20px;
             opacity: 0.8;
             font-family: var(--font-mono);
+            color: #fdb57f;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         /* The Custom Cursor/Follower (Desktop Only) */
@@ -170,6 +179,22 @@
             display: flex;
             gap: 20px;
             justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .cta-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                /* Adjust gap for vertical stacking */
+            }
+
+            .cta-wrapper .btn {
+                width: 100%;
+                max-width: 280px;
+                /* Keep buttons from getting too wide */
+                text-align: center;
+            }
         }
 
         .btn {
@@ -576,8 +601,8 @@
                 <h1>Setiawan</h1>
             </div>
             <h2>
-                Bridging ad spend and code. <br>
-                Tracking outcomes to the minute detail.
+                Bridging <b>ad spend</b> & <b>code</b>. <br>
+                Aligning digital architecture with business objectives.
             </h2>
 
             <div class="cta-wrapper">
@@ -742,7 +767,36 @@
     <!-- EXPANDER ELEMENT (Required for the card click) -->
     <carousel-expand></carousel-expand>
 
-    <!-- 6. MEDIUM / ICEBERG SECTION -->
+    <!-- 6. Final Pitch -->
+    <section class="container" style="text-align: center; padding: 100px 0;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div
+                style="font-family: var(--font-mono); color: #fdb57f; font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em;">
+                Why work with me
+            </div>
+            <h2
+                style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; text-transform: uppercase; margin-bottom: 30px;">
+                Code-level control. <br>
+                <span style="opacity: 0.5;">Agency-level strategy.</span>
+            </h2>
+
+            <p style="font-size: 1.1rem; opacity: 0.8; line-height: 1.6; max-width: 650px; margin: 0 auto;">
+                Marketing requires two engines: technical precision and creative strategy.
+                Whether it's server-side tracking or SEO dominance, I manage the entire ecosystem so you don't have to
+                hire two different departments.
+            </p>
+
+            <div class="cta-wrapper">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">
+                    Chat on LinkedIn
+                </a>
+                <a href="mailto:you@email.com" class="btn btn-secondary">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- 7. MEDIUM / ICEBERG SECTION -->
     <section class="medium-section">
         <div class="medium-content">
             <h2>Deep Dives</h2>
