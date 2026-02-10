@@ -583,6 +583,353 @@
             font-family: var(--font-mono);
             opacity: 0.8;
         }
+
+        /* --- CASE STUDY SECTION --- */
+        .case-study {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(253, 181, 127, 0.4), transparent);
+        }
+
+        .cs-hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .cs-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #fdb57f;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .cs-eyebrow::before,
+        .cs-eyebrow::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: #fdb57f;
+            opacity: 0.5;
+        }
+
+        .cs-headline {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            max-width: 800px;
+            margin: 0 auto 15px;
+        }
+
+        .cs-headline .accent {
+            color: #fdb57f;
+        }
+
+        .cs-sub {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            opacity: 0.5;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Mic Drop Stat */
+        .cs-mic-drop {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 50px 0;
+            margin-bottom: 40px;
+        }
+
+        .cs-stat-card {
+            text-align: center;
+            padding: 30px 25px;
+            border: 1px solid rgba(252, 248, 242, 0.08);
+            border-radius: 16px;
+            background: rgba(252, 248, 242, 0.02);
+            min-width: 180px;
+            flex: 1;
+            max-width: 260px;
+            transition: all 0.4s ease;
+        }
+
+        .cs-stat-card:hover {
+            border-color: rgba(253, 181, 127, 0.3);
+            background: rgba(253, 181, 127, 0.04);
+            transform: translateY(-4px);
+        }
+
+        .cs-stat-num {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .cs-stat-num.positive {
+            color: #6ee7b7;
+        }
+
+        .cs-stat-num.negative {
+            color: #fdb57f;
+        }
+
+        .cs-stat-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+
+        /* Accordion Cards */
+        .cs-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .cs-card {
+            border: 1px solid rgba(252, 248, 242, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .cs-card:hover {
+            border-color: rgba(252, 248, 242, 0.15);
+        }
+
+        .cs-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 30px;
+            cursor: pointer;
+            user-select: none;
+            background: rgba(252, 248, 242, 0.02);
+            transition: background 0.3s ease;
+        }
+
+        .cs-card-header:hover {
+            background: rgba(252, 248, 242, 0.04);
+        }
+
+        .cs-card-header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .cs-card-number {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            opacity: 0.4;
+            width: 24px;
+        }
+
+        .cs-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .cs-card-tag {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border: 1px solid rgba(252, 248, 242, 0.15);
+            border-radius: 20px;
+            opacity: 0.5;
+            white-space: nowrap;
+        }
+
+        .cs-card-toggle {
+            font-size: 1.5rem;
+            opacity: 0.3;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            line-height: 1;
+        }
+
+        .cs-card.open .cs-card-toggle {
+            transform: rotate(45deg);
+            opacity: 0.7;
+        }
+
+        .cs-card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cs-card.open .cs-card-body {
+            max-height: 800px;
+        }
+
+        .cs-card-content {
+            padding: 0 30px 30px 70px;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .cs-hero {
+                padding: 50px 0 40px;
+            }
+
+            .cs-mic-drop {
+                gap: 15px;
+                padding: 30px 0;
+            }
+
+            .cs-stat-card {
+                min-width: 45%;
+                /* Allow 2 per row */
+                padding: 20px 15px;
+            }
+
+            .cs-stat-num {
+                font-size: 2.2rem;
+            }
+
+            .cs-card-header {
+                padding: 20px;
+            }
+
+            .cs-card-content {
+                padding: 0 20px 25px 20px;
+            }
+
+            .cs-card-tag {
+                display: none;
+            }
+
+            /* Graph adjustments for mobile */
+            .cs-graph-container {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Strategy highlight */
+        .cs-aha {
+            margin: 20px 0;
+            padding: 20px 24px;
+            border-left: 3px solid #fdb57f;
+            background: rgba(253, 181, 127, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .cs-aha-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fdb57f;
+            margin-bottom: 8px;
+        }
+
+        .cs-aha p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Results Table */
+        .cs-table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(252, 248, 242, 0.08);
+        }
+
+        .cs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .cs-table th {
+            text-align: left;
+            padding: 16px 20px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.4;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(252, 248, 242, 0.08);
+        }
+
+        .cs-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(252, 248, 242, 0.04);
+        }
+
+        .cs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cs-table .metric-name {
+            font-weight: 600;
+        }
+
+        .cs-table .current {
+            font-weight: 700;
+        }
+
+        .cs-table .growth-positive {
+            color: #6ee7b7;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        .cs-table .growth-negative {
+            color: #fdb57f;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        /* Bottom quote */
+        .cs-quote {
+            text-align: center;
+            padding: 60px 0 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cs-quote blockquote {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            font-weight: 600;
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+
+        .cs-quote cite {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            opacity: 0.4;
+            font-style: normal;
+        }
     </style>
 </head>
 
@@ -718,6 +1065,11 @@
                         <h4>SPG Home Group</h4>
                         <p>100% Lead Gen Growth. Scaled Meta ads and restructured the entire customer journey for
                             maximum conversion.</p>
+                        <a href="#case-study"
+                            onclick="event.stopPropagation(); document.getElementById('case-study').scrollIntoView({behavior:'smooth'});"
+                            class="btn btn-primary"
+                            style="display:inline-block; margin-top:12px; font-size:0.7rem; padding:8px 18px;">Read Case
+                            Study →</a>
                     </div>
                 </div>
 
@@ -766,6 +1118,205 @@
 
     <!-- EXPANDER ELEMENT (Required for the card click) -->
     <carousel-expand></carousel-expand>
+
+    <!-- CASE STUDY: 101 Residential -->
+    <section class="case-study container" id="case-study">
+        <div class="cs-hero">
+            <div class="cs-eyebrow">Case Study</div>
+            <h2 class="cs-headline">
+                Increased Spend by <span class="accent">50%</span>.<br>
+                Dropped CPA by <span class="accent">9%</span>.
+            </h2>
+            <p class="cs-sub">Google Ads — Residential Construction — YoY Comparison</p>
+        </div>
+
+        <!-- Mic Drop Stats -->
+        <div class="cs-mic-drop">
+            <div class="cs-stat-card">
+                <div class="cs-stat-num positive">+66%</div>
+                <div class="cs-stat-label">More leads</div>
+            </div>
+            <div class="cs-stat-card">
+                <div class="cs-stat-num negative">−$4</div>
+                <div class="cs-stat-label">Cheaper per lead</div>
+            </div>
+            <div class="cs-stat-card">
+                <div class="cs-stat-num positive">+40%</div>
+                <div class="cs-stat-label">Conversion rate</div>
+            </div>
+        </div>
+
+        <!-- Accordion Cards -->
+        <div class="cs-cards">
+
+            <!-- Card 1: The Challenge -->
+            <div class="cs-card open">
+                <div class="cs-card-header" onclick="toggleCard(this)">
+                    <div class="cs-card-header-left">
+                        <span class="cs-card-number">01</span>
+                        <span class="cs-card-title">The Challenge</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:14px;">
+                        <span class="cs-card-tag">Context</span>
+                        <span class="cs-card-toggle">+</span>
+                    </div>
+                </div>
+                <div class="cs-card-body">
+                    <div class="cs-card-content">
+                        <p>The account was suffering from <strong>diluted focus</strong>. Budget was spread across too
+                            many small, specific campaigns — preventing the algorithm from gathering enough data to
+                            optimize effectively.</p>
+                        <br>
+                        <p>Previous Year Spend: <strong>$132k</strong> &nbsp;|&nbsp; Previous CPA:
+                            <strong>$45.28</strong>
+                        </p>
+                        <br>
+                        <p style="opacity:0.5;"><strong>Problem:</strong> Efficiency drops usually happen when you
+                            scale. We needed to scale <em>without</em> losing efficiency.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: The Strategy -->
+            <div class="cs-card">
+                <div class="cs-card-header" onclick="toggleCard(this)">
+                    <div class="cs-card-header-left">
+                        <span class="cs-card-number">02</span>
+                        <span class="cs-card-title">The Strategy</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:14px;">
+                        <span class="cs-card-tag">Execution</span>
+                        <span class="cs-card-toggle">+</span>
+                    </div>
+                </div>
+                <div class="cs-card-body">
+                    <div class="cs-card-content">
+                        <p><strong>A. Strategic Consolidation</strong> — We paused 40% of low-performing campaigns to
+                            pool data. The algorithm needs volume to learn; by consolidating budget into fewer, stronger
+                            campaigns, we fed the machine faster.</p>
+
+                        <div class="cs-aha">
+                            <div class="cs-aha-label">↯ The Insight</div>
+                            <p>Complexity was killing performance. By simplifying the account structure, we allowed the
+                                algorithm to make better bidding decisions.</p>
+                        </div>
+
+                        <p><strong>B. High-Intent Scaling</strong> — We identified "Double Storey" and "Home Builder"
+                            keywords as our highest value segments. We didn't just nudge the budget; we uncapped it.
+                            <strong>+300% spend → 5.6x conversions.</strong>
+                        </p>
+                        <br>
+                        <p><strong>C. Brand Dominance</strong> — We secured the bottom of the funnel, ensuring that
+                            awareness generated by broader campaigns was captured efficiently at the end.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: The Results & Visualization -->
+            <div class="cs-card">
+                <div class="cs-card-header" onclick="toggleCard(this)">
+                    <div class="cs-card-header-left">
+                        <span class="cs-card-number">03</span>
+                        <span class="cs-card-title">The Results</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:14px;">
+                        <span class="cs-card-tag">Data</span>
+                        <span class="cs-card-toggle">+</span>
+                    </div>
+                </div>
+                <div class="cs-card-body">
+                    <div class="cs-card-content">
+
+                        <!-- ANIMATED GRAPH CONTAINER -->
+                        <div class="cs-graph-container"
+                            style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(252, 248, 242, 0.05);">
+                            <div
+                                style="display:flex; justify-content:space-between; margin-bottom:10px; font-family:var(--font-mono); font-size:0.7rem; opacity:0.6;">
+                                <span>PERFORMANCE TREND</span>
+                                <div>
+                                    <span style="color:#6ee7b7; margin-right:10px;">● LEADS</span>
+                                    <span style="color:#fdb57f;">● COST/LEAD</span>
+                                </div>
+                            </div>
+                            <svg viewBox="0 0 400 150" style="width:100%; height:auto; overflow:visible;">
+                                <!-- Grid lines -->
+                                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(255,255,255,0.1)"
+                                    stroke-width="1" />
+                                <line x1="0" y1="70" x2="400" y2="70" stroke="rgba(255,255,255,0.1)" stroke-width="1"
+                                    stroke-dasharray="4" />
+                                <line x1="0" y1="20" x2="400" y2="20" stroke="rgba(255,255,255,0.1)" stroke-width="1"
+                                    stroke-dasharray="4" />
+
+                                <!-- Data Lines (Paths) -->
+                                <!-- Leads (Green): Growing exp -->
+                                <path class="graph-line leads" d="M0,120 Q100,110 200,80 T400,20" fill="none"
+                                    stroke="#6ee7b7" stroke-width="3" stroke-linecap="round" />
+                                <!-- CPA (Orange): Dropping slightly -->
+                                <path class="graph-line cpa" d="M0,80 Q150,85 400,95" fill="none" stroke="#fdb57f"
+                                    stroke-width="3" stroke-linecap="round" />
+
+                                <!-- End Points -->
+                                <circle class="graph-point" cx="400" cy="20" r="4" fill="#6ee7b7" />
+                                <circle class="graph-point" cx="400" cy="95" r="4" fill="#fdb57f" />
+                            </svg>
+                        </div>
+
+                        <div class="cs-table-wrap">
+                            <table class="cs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Metric</th>
+                                        <th>Previous Year</th>
+                                        <th>Current Year</th>
+                                        <th>Impact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="metric-name">Total Investment</td>
+                                        <td>$132,947</td>
+                                        <td class="current">$200,920</td>
+                                        <td class="growth-positive">+51%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="metric-name">Leads Generated</td>
+                                        <td>2,936</td>
+                                        <td class="current">4,863</td>
+                                        <td class="growth-positive">+66%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="metric-name">Cost Per Lead</td>
+                                        <td>$45.28</td>
+                                        <td class="current">$41.32</td>
+                                        <td class="growth-negative">−9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="metric-name">Conversion Rate</td>
+                                        <td>3.19%</td>
+                                        <td class="current">4.47%</td>
+                                        <td class="growth-positive">+40%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cs-aha" style="border-left-color: #6ee7b7;">
+                            <div class="cs-aha-label" style="color: #6ee7b7;">↯ The Mic Drop</div>
+                            <p>We acquired nearly <strong>2,000 additional leads</strong> this year — and paid
+                                <strong>$4 less</strong> for each one of them than the year before.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Philosophical Takeaway -->
+        <div class="cs-quote">
+            <blockquote>"Scale is not the enemy of efficiency; complexity is."</blockquote>
+            <cite>— The Anti-Gravity Principle</cite>
+        </div>
+    </section>
 
     <!-- 6. Final Pitch -->
     <section class="container" style="text-align: center; padding: 100px 0;">
@@ -1244,6 +1795,59 @@
         }
 
         customElements.define("carousel-expand", CarouselExpand);
+
+        // --- CASE STUDY ACCORDION ---
+        function toggleCard(header) {
+            const card = header.closest('.cs-card');
+            const isOpen = card.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.cs-card').forEach(c => c.classList.remove('open'));
+            // Toggle clicked
+            if (!isOpen) {
+                card.classList.add('open');
+                // Allow CSS transition to start, then refresh GSAP triggers
+                setTimeout(() => ScrollTrigger.refresh(), 550);
+            }
+        }
+
+        // Scroll-trigger for case study stats
+        gsap.utils.toArray('.cs-stat-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%' },
+                y: 40, opacity: 0, duration: 0.7, delay: i * 0.15, ease: 'power2.out'
+            });
+        });
+
+        gsap.utils.toArray('.cs-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%' },
+                x: -30, opacity: 0, duration: 0.6, delay: i * 0.1, ease: 'power2.out'
+            });
+        });
+
+        // --- GRAPH ANIMATION ---
+
+        // Prepare paths
+        const paths = document.querySelectorAll('.graph-line');
+        paths.forEach(path => {
+            const len = path.getTotalLength();
+            path.style.strokeDasharray = len;
+            path.style.strokeDashoffset = len;
+        });
+
+        const points = document.querySelectorAll('.graph-point');
+        gsap.set(points, { opacity: 0, scale: 0 });
+
+        ScrollTrigger.create({
+            trigger: ".cs-graph-container",
+            start: "top 80%",
+            onEnter: () => {
+                // Animate lines
+                gsap.to(paths, { strokeDashoffset: 0, duration: 1.5, ease: "power2.out", stagger: 0.2 });
+                // Animate points
+                gsap.to(points, { opacity: 1, scale: 1, duration: 0.5, delay: 1.2, ease: "back.out(1.7)" });
+            }
+        });
 
     </script>
 </body>
