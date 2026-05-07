@@ -4,7 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesson Setiawan | Digital Architect</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Jesson Setiawan — Digital Architect | Performance Marketing & Web Development</title>
+    <meta name="title" content="Jesson Setiawan — Digital Architect | Performance Marketing & Web Development">
+    <meta name="description" content="Jesson Setiawan bridges ad spend and code — a digital architect specialising in performance marketing, Google & Meta Ads, SEO strategy, and full-stack web development based in Perth, Australia.">
+    <meta name="author" content="Jesson Setiawan">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#040314">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://jessonsetiawan.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jessonsetiawan.com/">
+    <meta property="og:title" content="Jesson Setiawan — Digital Architect">
+    <meta property="og:description" content="Bridging ad spend and code. Performance marketing, Google & Meta Ads management, SEO strategy, and full-stack web development.">
+    <meta property="og:image" content="https://jessonsetiawan.com/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jesson Setiawan — Digital Architect portfolio">
+    <meta property="og:site_name" content="Jesson Setiawan">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://jessonsetiawan.com/">
+    <meta name="twitter:title" content="Jesson Setiawan — Digital Architect">
+    <meta name="twitter:description" content="Bridging ad spend and code. Performance marketing, Google & Meta Ads management, SEO strategy, and full-stack web development.">
+    <meta name="twitter:image" content="https://jessonsetiawan.com/img/og-image.png">
+    <meta name="twitter:image:alt" content="Jesson Setiawan — Digital Architect portfolio">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://jessonsetiawan.com/#website",
+          "url": "https://jessonsetiawan.com/",
+          "name": "Jesson Setiawan",
+          "description": "Digital Architect — Performance Marketing & Web Development",
+          "publisher": { "@id": "https://jessonsetiawan.com/#person" },
+          "inLanguage": "en-AU"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://jessonsetiawan.com/#webpage",
+          "url": "https://jessonsetiawan.com/",
+          "name": "Jesson Setiawan — Digital Architect | Performance Marketing & Web Development",
+          "isPartOf": { "@id": "https://jessonsetiawan.com/#website" },
+          "about": { "@id": "https://jessonsetiawan.com/#person" },
+          "description": "Jesson Setiawan bridges ad spend and code — a digital architect specialising in performance marketing, Google & Meta Ads, SEO strategy, and full-stack web development.",
+          "inLanguage": "en-AU",
+          "dateModified": "2026-05-07"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://jessonsetiawan.com/#person",
+          "name": "Jesson Setiawan",
+          "url": "https://jessonsetiawan.com/",
+          "image": "https://jessonsetiawan.com/img/jesson-1.png",
+          "jobTitle": "Digital Marketing Specialist",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Gatecrasher Advertising"
+          },
+          "alumniOf": [
+            { "@type": "Organization", "name": "Likeable Creative" },
+            { "@type": "Organization", "name": "PWD Digital Agency" }
+          ],
+          "knowsAbout": [
+            "Google Ads", "Meta Ads", "SEO", "Performance Marketing",
+            "Web Development", "Shopify", "Data Analytics", "Campaign Manager 360",
+            "SvelteKit", "Full-Stack Development"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/jessonjsetiawan/",
+            "https://medium.com/@jessonjsetiawan"
+          ],
+          "email": "jessonjsetiawan@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Perth",
+            "addressRegion": "WA",
+            "addressCountry": "AU"
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- GSAP Core & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -112,7 +208,7 @@
             letter-spacing: -0.05em;
         }
 
-        .hero h2 {
+        .hero-tagline {
             font-size: clamp(1rem, 5vw, 1.5rem);
             font-weight: 400;
             margin-top: 20px;
@@ -122,7 +218,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero h2 {
+            .hero-tagline {
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
@@ -944,34 +1040,34 @@
 <body>
 
     <!-- Custom Cursor Element (Desktop) -->
-    <div class="cursor-dot"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <main id="main-content">
 
     <!-- 1. HERO SECTION -->
-    <section class="hero" id="hero-area">
+    <section class="hero" id="hero-area" aria-label="Introduction">
         <div class="hero-content">
-            <div class="reveal-text">
-                <h1>Jesson</h1>
-            </div>
-            <div class="reveal-text">
-                <h1>Setiawan</h1>
-            </div>
-            <h2>
-                Bridging <b>ad spend</b> & <b>code</b>. <br>
+            <h1>
+                <div class="reveal-text"><span>Jesson</span></div>
+                <div class="reveal-text"><span>Setiawan</span></div>
+            </h1>
+            <p class="hero-tagline">
+                Bridging <b>ad spend</b> &amp; <b>code</b>. <br>
                 Aligning digital architecture with business objectives.
-            </h2>
+            </p>
 
             <div class="cta-wrapper">
-                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" class="btn btn-primary">Connect
+                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Connect with Jesson Setiawan on LinkedIn">Connect
                     on
                     LinkedIn</a>
-                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary">Email Me</a>
+                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary" aria-label="Send email to Jesson Setiawan">Email Me</a>
             </div>
         </div>
         <!-- Images injected via JS -->
     </section>
 
     <!-- 2. CERTIFICATION STRIP -->
-    <div class="cert-strip">
+    <div class="cert-strip" role="marquee" aria-label="Professional certifications">
         <div class="marquee-content">
             <div class="cert-item">Google Data Analytics <span>SPECIALISATION</span></div>
             <div class="cert-item">Campaign Manager 360 <span>CERTIFIED</span></div>
@@ -988,18 +1084,18 @@
     </div>
 
     <!-- 3. EXPERIENCE SECTION -->
-    <section class="container">
-        <div class="section-header">
+    <section class="container" aria-label="Professional experience">
+        <h2 class="section-header">
             Experience
             <span class="section-sub">03 — HISTORY</span>
-        </div>
+        </h2>
         <div class="grid-layout">
             <div class="exp-label" style="opacity: 0.5; font-family: var(--font-mono);">2022 — PRESENT</div>
             <div class="exp-list">
                 <div class="exp-item">
                     <div class="exp-header">
                         <div>
-                            <div class="exp-role">Digital Marketing Specialist</div>
+                            <h3 class="exp-role">Digital Marketing Specialist</h3>
                             <div class="exp-company">Gatecrasher Advertising</div>
                         </div>
                         <div class="exp-date">May 2024 - Present</div>
@@ -1014,7 +1110,7 @@
                 <div class="exp-item">
                     <div class="exp-header">
                         <div>
-                            <div class="exp-role">Digital Account Manager</div>
+                            <h3 class="exp-role">Digital Account Manager</h3>
                             <div class="exp-company">Likeable Creative</div>
                         </div>
                         <div class="exp-date">Jul 2023 - May 2024</div>
@@ -1029,7 +1125,7 @@
                 <div class="exp-item">
                     <div class="exp-header">
                         <div>
-                            <div class="exp-role">Account Coordinator</div>
+                            <h3 class="exp-role">Account Coordinator</h3>
                             <div class="exp-company">PWD Digital Agency</div>
                         </div>
                         <div class="exp-date">Nov 2022 - Jul 2023</div>
@@ -1044,11 +1140,11 @@
     </section>
 
     <!-- 4. COLLABORATORS SECTION -->
-    <section class="container">
-        <div class="section-header">
+    <section class="container" aria-label="Client collaborations">
+        <h2 class="section-header">
             Collaborators
             <span class="section-sub">04 — NETWORK</span>
-        </div>
+        </h2>
         <div class="grid-layout">
             <div class="exp-label" style="opacity: 0.5; font-family: var(--font-mono);">SELECTED CLIENTS</div>
             <div class="exp-list">
@@ -1057,7 +1153,7 @@
                     <div class="client-name">Avant Pro</div>
                     <div class="client-meta">Golf Apparel • Perth, WA</div>
                     <div class="client-popup">
-                        <img src="./img/homepage/avant-homepage-horizontal.png" alt="Avant Pro">
+                        <img src="./img/homepage/avant-homepage-horizontal.png" alt="Avant Pro golf apparel e-commerce website homepage">
                         <h4>Avant Pro</h4>
                         <p>Zero to Launch. Built the full e-commerce stack and established the foundational brand
                             identity.</p>
@@ -1068,7 +1164,7 @@
                     <div class="client-name">SPG Home Group</div>
                     <div class="client-meta">Osborne Park, WA</div>
                     <div class="client-popup">
-                        <img src="./img/homepage/101-residential-homepage.png" alt="SPG">
+                        <img src="./img/homepage/101-residential-homepage.png" alt="SPG Home Group residential construction website homepage">
                         <h4>SPG Home Group</h4>
                         <p>100% Lead Gen Growth. Scaled Meta ads and restructured the entire customer journey for
                             maximum conversion.</p>
@@ -1084,7 +1180,7 @@
                     <div class="client-name">Limestone Coast Brewer</div>
                     <div class="client-meta">Malaga, WA</div>
                     <div class="client-popup">
-                        <img src="./img/homepage/limestonecoast-homepage.png" alt="Limestone">
+                        <img src="./img/homepage/limestonecoast-homepage.png" alt="Limestone Coast Brewer craft brewery website homepage">
                         <h4>Limestone Coast</h4>
                         <p>Digital Loyalty Architecture. Initiated promo offerings and integrated a comprehensive
                             loyalty loop.</p>
@@ -1096,11 +1192,11 @@
     </section>
 
     <!-- 5. PORTFOLIO SHOWCASE (CUSTOM FLOATING CARDS) -->
-    <section class="container">
-        <div class="section-header">
+    <section class="container" aria-label="Selected portfolio works">
+        <h2 class="section-header">
             Works
             <span class="section-sub">05 — SELECTION</span>
-        </div>
+        </h2>
 
         <div class="showcase-area">
 
@@ -1122,9 +1218,9 @@
     <carousel-expand></carousel-expand>
 
     <!-- CASE STUDY: 101 Residential -->
-    <section class="case-study container" id="case-study">
+    <section class="case-study container" id="case-study" aria-label="SPG Home Group case study">
         <div class="cs-hero">
-            <div class="cs-eyebrow">Case Study</div>
+            <p class="cs-eyebrow">Case Study</p>
             <h2 class="cs-headline">
                 Increased Spend by <span class="accent">50%</span>.<br>
                 Dropped CPA by <span class="accent">9%</span>.
@@ -1156,7 +1252,7 @@
                 <div class="cs-card-header" onclick="toggleCard(this)">
                     <div class="cs-card-header-left">
                         <span class="cs-card-number">01</span>
-                        <span class="cs-card-title">The Challenge</span>
+                        <h3 class="cs-card-title">The Challenge</h3>
                     </div>
                     <div style="display:flex; align-items:center; gap:14px;">
                         <span class="cs-card-tag">Context</span>
@@ -1184,7 +1280,7 @@
                 <div class="cs-card-header" onclick="toggleCard(this)">
                     <div class="cs-card-header-left">
                         <span class="cs-card-number">02</span>
-                        <span class="cs-card-title">The Strategy</span>
+                        <h3 class="cs-card-title">The Strategy</h3>
                     </div>
                     <div style="display:flex; align-items:center; gap:14px;">
                         <span class="cs-card-tag">Execution</span>
@@ -1219,7 +1315,7 @@
                 <div class="cs-card-header" onclick="toggleCard(this)">
                     <div class="cs-card-header-left">
                         <span class="cs-card-number">03</span>
-                        <span class="cs-card-title">The Results</span>
+                        <h3 class="cs-card-title">The Results</h3>
                     </div>
                     <div style="display:flex; align-items:center; gap:14px;">
                         <span class="cs-card-tag">Data</span>
@@ -1320,12 +1416,12 @@
     </section>
 
     <!-- 6. Final Pitch -->
-    <section class="container" style="text-align: center; padding: 100px 0;">
+    <section class="container" style="text-align: center; padding: 100px 0;" aria-label="Why work with me">
         <div style="max-width: 800px; margin: 0 auto;">
-            <div
+            <p
                 style="font-family: var(--font-mono); color: #fdb57f; font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em;">
                 Why work with me
-            </div>
+            </p>
             <h2
                 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; text-transform: uppercase; margin-bottom: 30px;">
                 Code-level control. <br>
@@ -1339,28 +1435,30 @@
             </p>
 
             <div class="cta-wrapper">
-                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" class="btn btn-primary">
+                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Chat with Jesson on LinkedIn">
                     Chat on LinkedIn
                 </a>
-                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary">
+                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary" aria-label="Hire Jesson Setiawan via email">
                     Hire Me
                 </a>
             </div>
         </div>
     </section>
     <!-- 7. MEDIUM / ICEBERG SECTION -->
-    <section class="medium-section">
+    <section class="medium-section" aria-label="Blog articles on Medium">
         <div class="medium-content">
             <h2>Deep Dives</h2>
             <p>Exploring the depths of digital marketing, AI agents, and web architecture underneath the surface.</p>
-            <a href="https://medium.com/@jessonjsetiawan" target="_blank" class="btn btn-primary">Read on Medium</a>
+            <a href="https://medium.com/@jessonjsetiawan" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Read Jesson's articles on Medium">Read on Medium</a>
         </div>
     </section>
 
 
-    <footer>
-        <a href="mailto:jessonjsetiawan@gmail.com" class="footer-link">Let's Talk.</a>
-        <p style="opacity: 0.5; font-family: var(--font-mono);">© 2025 Jesson Setiawan. All Rights Reserved.</p>
+    </main>
+
+    <footer role="contentinfo">
+        <a href="mailto:jessonjsetiawan@gmail.com" class="footer-link" aria-label="Email Jesson Setiawan">Let's Talk.</a>
+        <p style="opacity: 0.5; font-family: var(--font-mono);">© 2026 Jesson Setiawan. All Rights Reserved.</p>
     </footer>
 
     <!-- MAIN SCRIPT -->
@@ -1371,7 +1469,8 @@
         const imageUrls = [
             './img/jesson-1.png',
             './img/jesson-2.png',
-            './img/jesson-3.png'
+            './img/jesson-3.png',
+            './img/jesson-4.png'
         ];
         const heroSection = document.getElementById('hero-area');
         const isMobile = window.innerWidth <= 768;
@@ -1451,8 +1550,8 @@
         }
 
         // --- ENTRANCE ANIMATIONS ---
-        gsap.from(".hero h1", { y: 150, opacity: 0, duration: 1.5, ease: "power4.out", stagger: 0.1 });
-        gsap.from(".hero h2", { y: 20, opacity: 0, duration: 1, delay: 0.8 });
+        gsap.from(".hero h1 .reveal-text", { y: 150, opacity: 0, duration: 1.5, ease: "power4.out", stagger: 0.1 });
+        gsap.from(".hero-tagline", { y: 20, opacity: 0, duration: 1, delay: 0.8 });
         gsap.from(".cta-wrapper", { y: 20, opacity: 0, duration: 1, delay: 1 });
         gsap.from(".cert-strip", { scaleX: 0, opacity: 0, duration: 1.2, delay: 1.2, ease: "expo.out" });
 
