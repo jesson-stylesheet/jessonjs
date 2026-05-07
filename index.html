@@ -588,21 +588,29 @@
         .case-study {
             position: relative;
             overflow: hidden;
+            background: var(--bg-light);
+            /* light background */
+            color: var(--text-inv);
+            /* dark text */
+            border: 1px solid rgba(4, 3, 20, 0.08);
+            border-radius: 32px;
+            padding: 60px 5%;
+            margin: 80px auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
 
-        .case-study::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(253, 181, 127, 0.4), transparent);
+        @media (max-width: 768px) {
+            .case-study {
+                padding: 40px 20px;
+                border-radius: 24px;
+                margin: 40px auto;
+                width: 95%;
+            }
         }
 
         .cs-hero {
             text-align: center;
-            padding: 80px 0 60px;
+            padding: 20px 0 60px;
         }
 
         .cs-eyebrow {
@@ -610,7 +618,7 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #fdb57f;
+            color: #ea580c;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -623,7 +631,7 @@
             content: '';
             width: 30px;
             height: 1px;
-            background: #fdb57f;
+            background: #ea580c;
             opacity: 0.5;
         }
 
@@ -636,7 +644,7 @@
         }
 
         .cs-headline .accent {
-            color: #fdb57f;
+            color: #ea580c;
         }
 
         .cs-sub {
@@ -660,9 +668,9 @@
         .cs-stat-card {
             text-align: center;
             padding: 30px 25px;
-            border: 1px solid rgba(252, 248, 242, 0.08);
+            border: 1px solid rgba(4, 3, 20, 0.08);
             border-radius: 16px;
-            background: rgba(252, 248, 242, 0.02);
+            background: rgba(4, 3, 20, 0.02);
             min-width: 180px;
             flex: 1;
             max-width: 260px;
@@ -670,8 +678,8 @@
         }
 
         .cs-stat-card:hover {
-            border-color: rgba(253, 181, 127, 0.3);
-            background: rgba(253, 181, 127, 0.04);
+            border-color: rgba(234, 88, 12, 0.5);
+            background: rgba(234, 88, 12, 0.1);
             transform: translateY(-4px);
         }
 
@@ -683,11 +691,11 @@
         }
 
         .cs-stat-num.positive {
-            color: #6ee7b7;
+            color: #059669;
         }
 
         .cs-stat-num.negative {
-            color: #fdb57f;
+            color: #ea580c;
         }
 
         .cs-stat-label {
@@ -706,14 +714,14 @@
         }
 
         .cs-card {
-            border: 1px solid rgba(252, 248, 242, 0.06);
+            border: 1px solid rgba(4, 3, 20, 0.06);
             border-radius: 12px;
             overflow: hidden;
             transition: border-color 0.3s ease;
         }
 
         .cs-card:hover {
-            border-color: rgba(252, 248, 242, 0.15);
+            border-color: rgba(4, 3, 20, 0.15);
         }
 
         .cs-card-header {
@@ -723,12 +731,12 @@
             padding: 24px 30px;
             cursor: pointer;
             user-select: none;
-            background: rgba(252, 248, 242, 0.02);
+            background: rgba(4, 3, 20, 0.02);
             transition: background 0.3s ease;
         }
 
         .cs-card-header:hover {
-            background: rgba(252, 248, 242, 0.04);
+            background: rgba(4, 3, 20, 0.04);
         }
 
         .cs-card-header-left {
@@ -755,7 +763,7 @@
             text-transform: uppercase;
             letter-spacing: 0.08em;
             padding: 4px 12px;
-            border: 1px solid rgba(252, 248, 242, 0.15);
+            border: 1px solid rgba(4, 3, 20, 0.15);
             border-radius: 20px;
             opacity: 0.5;
             white-space: nowrap;
@@ -780,7 +788,7 @@
         }
 
         .cs-card.open .cs-card-body {
-            max-height: 800px;
+            max-height: 2000px;
         }
 
         .cs-card-content {
@@ -792,7 +800,7 @@
 
         @media (max-width: 768px) {
             .cs-hero {
-                padding: 50px 0 40px;
+                padding: 10px 0 40px;
             }
 
             .cs-mic-drop {
@@ -833,8 +841,8 @@
         .cs-aha {
             margin: 20px 0;
             padding: 20px 24px;
-            border-left: 3px solid #fdb57f;
-            background: rgba(253, 181, 127, 0.05);
+            border-left: 3px solid #ea580c;
+            background: rgba(234, 88, 12, 0.05);
             border-radius: 0 8px 8px 0;
         }
 
@@ -843,7 +851,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #fdb57f;
+            color: #ea580c;
             margin-bottom: 8px;
         }
 
@@ -858,7 +866,7 @@
             overflow-x: auto;
             margin: 20px 0;
             border-radius: 12px;
-            border: 1px solid rgba(252, 248, 242, 0.08);
+            border: 1px solid rgba(4, 3, 20, 0.08);
         }
 
         .cs-table {
@@ -876,12 +884,12 @@
             letter-spacing: 0.1em;
             opacity: 0.4;
             font-weight: 400;
-            border-bottom: 1px solid rgba(252, 248, 242, 0.08);
+            border-bottom: 1px solid rgba(4, 3, 20, 0.08);
         }
 
         .cs-table td {
             padding: 16px 20px;
-            border-bottom: 1px solid rgba(252, 248, 242, 0.04);
+            border-bottom: 1px solid rgba(4, 3, 20, 0.04);
         }
 
         .cs-table tr:last-child td {
@@ -897,13 +905,13 @@
         }
 
         .cs-table .growth-positive {
-            color: #6ee7b7;
+            color: #059669;
             font-family: var(--font-mono);
             font-weight: 600;
         }
 
         .cs-table .growth-negative {
-            color: #fdb57f;
+            color: #ea580c;
             font-family: var(--font-mono);
             font-weight: 600;
         }
@@ -953,9 +961,10 @@
             </h2>
 
             <div class="cta-wrapper">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">Connect on
+                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" class="btn btn-primary">Connect
+                    on
                     LinkedIn</a>
-                <a href="mailto:you@email.com" class="btn btn-secondary">Email Me</a>
+                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary">Email Me</a>
             </div>
         </div>
         <!-- Images injected via JS -->
@@ -1048,8 +1057,7 @@
                     <div class="client-name">Avant Pro</div>
                     <div class="client-meta">Golf Apparel • Perth, WA</div>
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1593111774240-d529f12db464?q=80&w=600&auto=format&fit=crop"
-                            alt="Avant Pro">
+                        <img src="./img/homepage/avant-homepage-horizontal.png" alt="Avant Pro">
                         <h4>Avant Pro</h4>
                         <p>Zero to Launch. Built the full e-commerce stack and established the foundational brand
                             identity.</p>
@@ -1060,8 +1068,7 @@
                     <div class="client-name">SPG Home Group</div>
                     <div class="client-meta">Osborne Park, WA</div>
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop"
-                            alt="SPG">
+                        <img src="./img/homepage/101-residential-homepage.png" alt="SPG">
                         <h4>SPG Home Group</h4>
                         <p>100% Lead Gen Growth. Scaled Meta ads and restructured the entire customer journey for
                             maximum conversion.</p>
@@ -1077,8 +1084,7 @@
                     <div class="client-name">Limestone Coast Brewer</div>
                     <div class="client-meta">Malaga, WA</div>
                     <div class="client-popup">
-                        <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=600&auto=format&fit=crop"
-                            alt="Limestone">
+                        <img src="./img/homepage/limestonecoast-homepage.png" alt="Limestone">
                         <h4>Limestone Coast</h4>
                         <p>Digital Loyalty Architecture. Initiated promo offerings and integrated a comprehensive
                             loyalty loop.</p>
@@ -1098,19 +1104,15 @@
 
         <div class="showcase-area">
 
-            <carousel-card skew="5deg, 3deg"
-                img="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?q=80&w=800&auto=format&fit=crop"
-                title="Avant Apparel" subtitle="SHOPIFY / BRANDING">
+            <carousel-card skew="5deg, 3deg" img="./img/homepage/avant-homepage-vertical.png" title="Avant Apparel"
+                subtitle="SHOPIFY / BRANDING">
             </carousel-card>
 
-            <carousel-card skew="-3deg, 2deg"
-                img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
-                title="Media Console" subtitle="REACT / DATA VIZ">
+            <carousel-card skew="-3deg, 2deg" img="./img/visual/test.png" title="Social Media" subtitle="Organic / UGC">
             </carousel-card>
 
-            <carousel-card skew="2deg, -4deg"
-                img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
-                title="Growth Systems" subtitle="SEO / ARCHITECTURE">
+            <carousel-card skew="2deg, -4deg" img="./img/visual/rune-trader.png" title="Growth Systems"
+                subtitle="AI Agents/ SvelteKit">
             </carousel-card>
 
         </div>
@@ -1229,35 +1231,34 @@
 
                         <!-- ANIMATED GRAPH CONTAINER -->
                         <div class="cs-graph-container"
-                            style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(252, 248, 242, 0.05);">
+                            style="margin-bottom: 30px; padding: 20px; background: rgba(4,3,20,0.03); border-radius: 12px; border: 1px solid rgba(4, 3, 20, 0.05);">
                             <div
                                 style="display:flex; justify-content:space-between; margin-bottom:10px; font-family:var(--font-mono); font-size:0.7rem; opacity:0.6;">
                                 <span>PERFORMANCE TREND</span>
                                 <div>
-                                    <span style="color:#6ee7b7; margin-right:10px;">● LEADS</span>
-                                    <span style="color:#fdb57f;">● COST/LEAD</span>
+                                    <span style="color:#059669; margin-right:10px;">● LEADS</span>
+                                    <span style="color:#ea580c;">● COST/LEAD</span>
                                 </div>
                             </div>
                             <svg viewBox="0 0 400 150" style="width:100%; height:auto; overflow:visible;">
                                 <!-- Grid lines -->
-                                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(255,255,255,0.1)"
-                                    stroke-width="1" />
-                                <line x1="0" y1="70" x2="400" y2="70" stroke="rgba(255,255,255,0.1)" stroke-width="1"
+                                <line x1="0" y1="120" x2="400" y2="120" stroke="rgba(4,3,20,0.1)" stroke-width="1" />
+                                <line x1="0" y1="70" x2="400" y2="70" stroke="rgba(4,3,20,0.1)" stroke-width="1"
                                     stroke-dasharray="4" />
-                                <line x1="0" y1="20" x2="400" y2="20" stroke="rgba(255,255,255,0.1)" stroke-width="1"
+                                <line x1="0" y1="20" x2="400" y2="20" stroke="rgba(4,3,20,0.1)" stroke-width="1"
                                     stroke-dasharray="4" />
 
                                 <!-- Data Lines (Paths) -->
                                 <!-- Leads (Green): Growing exp -->
                                 <path class="graph-line leads" d="M0,120 Q100,110 200,80 T400,20" fill="none"
-                                    stroke="#6ee7b7" stroke-width="3" stroke-linecap="round" />
+                                    stroke="#059669" stroke-width="3" stroke-linecap="round" />
                                 <!-- CPA (Orange): Dropping slightly -->
-                                <path class="graph-line cpa" d="M0,80 Q150,85 400,95" fill="none" stroke="#fdb57f"
+                                <path class="graph-line cpa" d="M0,80 Q150,85 400,95" fill="none" stroke="#ea580c"
                                     stroke-width="3" stroke-linecap="round" />
 
                                 <!-- End Points -->
-                                <circle class="graph-point" cx="400" cy="20" r="4" fill="#6ee7b7" />
-                                <circle class="graph-point" cx="400" cy="95" r="4" fill="#fdb57f" />
+                                <circle class="graph-point" cx="400" cy="20" r="4" fill="#059669" />
+                                <circle class="graph-point" cx="400" cy="95" r="4" fill="#ea580c" />
                             </svg>
                         </div>
 
@@ -1299,8 +1300,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="cs-aha" style="border-left-color: #6ee7b7;">
-                            <div class="cs-aha-label" style="color: #6ee7b7;">↯ The Mic Drop</div>
+                        <div class="cs-aha" style="border-left-color: #059669; background: rgba(5, 150, 105, 0.05);">
+                            <div class="cs-aha-label" style="color: #059669;">↯ The Mic Drop</div>
                             <p>We acquired nearly <strong>2,000 additional leads</strong> this year — and paid
                                 <strong>$4 less</strong> for each one of them than the year before.
                             </p>
@@ -1314,7 +1315,7 @@
         <!-- Philosophical Takeaway -->
         <div class="cs-quote">
             <blockquote>"Scale is not the enemy of efficiency; complexity is."</blockquote>
-            <cite>— The Anti-Gravity Principle</cite>
+            <cite>— The Lean Marketing Principle</cite>
         </div>
     </section>
 
@@ -1338,10 +1339,10 @@
             </p>
 
             <div class="cta-wrapper">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">
+                <a href="https://www.linkedin.com/in/jessonjsetiawan/" target="_blank" class="btn btn-primary">
                     Chat on LinkedIn
                 </a>
-                <a href="mailto:you@email.com" class="btn btn-secondary">
+                <a href="mailto:jessonjsetiawan@gmail.com" class="btn btn-secondary">
                     Hire Me
                 </a>
             </div>
@@ -1358,7 +1359,7 @@
 
 
     <footer>
-        <a href="mailto:you@email.com" class="footer-link">Let's Talk.</a>
+        <a href="mailto:jessonjsetiawan@gmail.com" class="footer-link">Let's Talk.</a>
         <p style="opacity: 0.5; font-family: var(--font-mono);">© 2025 Jesson Setiawan. All Rights Reserved.</p>
     </footer>
 
@@ -1368,9 +1369,9 @@
 
         // --- GLOBAL CONFIG ---
         const imageUrls = [
-            'https://via.placeholder.com/200/fcf8f2/040314?text=J',
-            'https://via.placeholder.com/200/fcf8f2/040314?text=S',
-            'https://via.placeholder.com/200/fcf8f2/040314?text=Me'
+            './img/jesson-1.png',
+            './img/jesson-2.png',
+            './img/jesson-3.png'
         ];
         const heroSection = document.getElementById('hero-area');
         const isMobile = window.innerWidth <= 768;
